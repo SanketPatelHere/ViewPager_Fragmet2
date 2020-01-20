@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
 
         loadFragment(new FirstFragment(), "first");
         //loadFragment(new FirstFragment(), "first");
+        //onAttach1, onCreate1, onCreateView1, onStart1, onResume1
+        //extra call = Destroyview1, destroy1, detach1 call for first
+        //onAttach1, onCreate1, onCreateView1, onStart1, onResume1
+
         Fragment ff = getSupportFragmentManager().findFragmentByTag("first");
         if(ff!=null)
         {
