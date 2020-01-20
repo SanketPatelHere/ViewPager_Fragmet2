@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class FirstFragment extends Fragment {
+public class FirstFragment<onCreateDialog> extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -43,8 +43,9 @@ public class FirstFragment extends Fragment {
                 try
                 {
                     FragmentTransaction ft = getFragmentManager().beginTransaction();
-                    ft.replace(R.id.root_frame, new SecondFragment());
-                    //ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                    ft.replace(R.id.root_frame, new SecondFragment(), "aaa");
+                    //ft.add(R.id.root_frame, new SecondFragment(), "aaa"); //target tag
+                    ft.addToBackStack("aaaa"); //source tag
                     ft.commit();
                 }
                 catch (Exception e)

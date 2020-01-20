@@ -41,8 +41,10 @@ public class SecondFragment  extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.root_frame, new ThirdFragment());
-                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                ft.replace(R.id.root_frame, new ThirdFragment(), "aaa");
+                //ft.add(R.id.root_frame, new ThirdFragment(), "aaa");
+                ft.addToBackStack("aaaa");
+
                 ft.commit();
 
             }

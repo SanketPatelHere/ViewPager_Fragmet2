@@ -30,14 +30,12 @@ public class RootFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Log.i("My onCreateViewroot = ","called");
-
-        /*FragmentManager fm = getActivity().getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.fm, new MyFragment());
-        ft.commit();*/
         View v = inflater.inflate(R.layout.root_fragment, container, false);
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.root_frame, new FirstFragment());
+                ft.replace(R.id.root_frame, new FirstFragment(), "aaa");
+                //ft.add(R.id.root_frame, new FirstFragment(), "aaa");
+                ft.addToBackStack("aaaa");
+
                 ft.commit();
 
         return v;

@@ -11,7 +11,14 @@
    <android.support.v4.view.ViewPager
        android:id="@+id/pager"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
+       android:layout_height="200dp"
        android:layout_margin="20dp"
        android:background="#ccddbb"/>
+
+   <FrameLayout
+       android:id="@+id/fm"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_margin="15dp"
+       android:background="#ddccbb"/>
 </LinearLayout>
